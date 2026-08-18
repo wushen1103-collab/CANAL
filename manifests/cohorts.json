@@ -1,0 +1,49 @@
+{
+  "bindingdb_article_independent": {
+    "censor_rate": 0.0703176604815949,
+    "documents": 460,
+    "molecules": 10065,
+    "records": 16653,
+    "scaffolds": 4311,
+    "target_endpoints": 20,
+    "years": [2000, 2023]
+  },
+  "bindingdb_all": {
+    "censor_rate": 0.06999527856468367,
+    "documents": 464,
+    "molecules": 10229,
+    "records": 16944,
+    "scaffolds": 4375,
+    "target_endpoints": 20,
+    "years": [2000, 2023]
+  },
+  "bindingdb_independent_strict": {
+    "censor_rate": 0.07019652623354769,
+    "documents": 460,
+    "molecules": 10063,
+    "records": 16639,
+    "scaffolds": 4311,
+    "target_endpoints": 20,
+    "years": [2000, 2023]
+  },
+  "chembl37_canal20": {
+    "assays": 15908,
+    "censor_rate": 0.2516725394028856,
+    "documents": 7352,
+    "molecules": 102507,
+    "records": 168008,
+    "scaffolds": 40437,
+    "target_endpoints": 20,
+    "years": [2010, 2025]
+  },
+  "source_files": {
+    "bindingdb_articles_202608": {
+      "sha256": "2529b1c572aa7b298e57355e251c9a9572b82dd35f97259d5e3866ee69bfada5",
+      "url": "https://www.bindingdb.org/rwd/bind/downloads/BindingDB_BindingDB_Articles_202608_tsv.zip"
+    },
+    "chembl_37_sqlite": {
+      "extracted_sqlite_sha256": "4be13df3b68e25dcd0bff44bf094033b5aebe98f415acdc8c1cdf380e0c15142",
+      "url": "https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_37/chembl_37_sqlite.tar.gz"
+    }
+  }
+}

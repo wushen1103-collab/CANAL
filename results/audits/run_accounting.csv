@@ -1,0 +1,15 @@
+dataset,experiment,semisynthetic,metric_records,methods,splits,seeds,expected_records_from_observed_axes
+BindingDB-Articles-202608,external_bindingdb,False,125,5,5,5,125
+BindingDB-Articles-202608,external_bindingdb,True,125,5,5,5,125
+BindingDB-Articles-202608,external_bindingdb_calibrated,False,50,2,5,5,50
+BindingDB-Articles-202608,external_bindingdb_calibrated,True,50,2,5,5,50
+ChEMBL37-CANAL20,canal_calibrated_backbone,False,50,2,5,5,50
+ChEMBL37-CANAL20,canal_calibrated_backbone,True,50,2,5,5,50
+ChEMBL37-CANAL20,core,False,125,5,5,5,125
+ChEMBL37-CANAL20,core,True,125,5,5,5,125
+ChEMBL37-CANAL20,metadata_permuted_control,False,125,5,5,5,125
+ChEMBL37-CANAL20,metadata_permuted_control,True,125,5,5,5,125
+ChEMBL37-CANAL20,smiles_cnn_baseline,False,25,1,5,5,25
+ChEMBL37-CANAL20,smiles_cnn_baseline,True,25,1,5,5,25
+ChEMBL37-CANAL20,tree_baselines,False,175,7,5,5,175
+ChEMBL37-CANAL20,tree_baselines,True,175,7,5,5,175

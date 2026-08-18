@@ -1,0 +1,13 @@
+dataset,experiment,semisynthetic,cases,top1_changed_rate,kendall_rank_corr_mean,kendall_rank_corr_std
+BindingDB-Articles-202608,external_bindingdb,False,25,0.56,0.352,0.40529824409521764
+BindingDB-Articles-202608,external_bindingdb,True,25,0.6,0.368,0.41904653679513926
+BindingDB-Articles-202608,external_bindingdb_calibrated,False,25,0.0,1.0,0.0
+BindingDB-Articles-202608,external_bindingdb_calibrated,True,25,0.0,1.0,0.0
+ChEMBL37-CANAL20,canal_calibrated_backbone,False,25,0.28,0.44,0.9165151389911679
+ChEMBL37-CANAL20,canal_calibrated_backbone,True,25,0.04,0.92,0.4
+ChEMBL37-CANAL20,core,False,25,0.8,0.072,0.5412331598611945
+ChEMBL37-CANAL20,core,True,25,0.56,0.4159999999999999,0.4506291897632315
+ChEMBL37-CANAL20,metadata_permuted_control,False,25,0.84,0.072,0.6134057928212503
+ChEMBL37-CANAL20,metadata_permuted_control,True,25,0.56,0.44799999999999995,0.40116497022214354
+ChEMBL37-CANAL20,tree_baselines,False,25,0.4,0.4361904761904762,0.309731310178537
+ChEMBL37-CANAL20,tree_baselines,True,25,0.04,0.8514285714285715,0.1581258337195209

@@ -1,0 +1,17 @@
+{
+  "boundary_probability_ece_like_abs_gap": 0.2887370567988662,
+  "calibration_fit_protocol": "For each split and seed, ExtraTrees is fitted on train rows only; affine scale/bias/sigma are fitted separately for each target_endpoint using validation rows only; test rows are used only after target-wise calibration is fixed.",
+  "calibration_scope": "target_endpoint_split_seed_validation_only",
+  "exact_coverage_mean": {
+    "0.5": 0.5560208917129965,
+    "0.9": 0.8993009545742985
+  },
+  "fallback_identity_rows": 0,
+  "paired_split_seed_rows": 18,
+  "paired_target_seed_aggregated_rows": 18,
+  "paired_target_split_seed_rows": 18,
+  "split_seed_metric_rows": 50,
+  "target_level_metric_rows": 1000,
+  "targetwise_fit_audit_csv": "results/benchmark/targetwise_calibration_fit_audit.csv",
+  "targetwise_fit_rows": 500
+}

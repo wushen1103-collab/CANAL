@@ -1,0 +1,11 @@
+flag,rows,rate,unique_target_endpoints
+overlap_exact_molecule_target_endpoint,0,0.0,0
+overlap_canonical_molecule_target,14,0.0008262511803588291,2
+overlap_molecule_target_no_endpoint,0,0.0,0
+overlap_molecule_only,260,0.015344664778092541,15
+overlap_target_only,1519,0.08964825306893295,2
+overlap_doi,291,0.017174220963172806,3
+overlap_pmid,270,0.01593484419263456,3
+overlap_article,291,0.017174220963172806,3
+overlap_measurement_pactivity_le_0p01,0,0.0,0
+overlap_measurement_pactivity_le_0p05,0,0.0,0

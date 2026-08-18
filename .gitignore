@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and editor state
+.venv/
+venv/
+.env
+.idea/
+.vscode/
+
+# Downloaded or generated data
+data/raw/
+data/processed/
+*.parquet
+*.sqlite
+*.db
+
+# Generated runs and caches
+artifacts/
+logs/
+*.log
+*.npz
+*.pt
+*.pth
+*.ckpt
+
+# Operating-system files
+.DS_Store
+Thumbs.db

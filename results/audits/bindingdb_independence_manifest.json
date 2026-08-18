@@ -1,0 +1,125 @@
+{
+  "bindingdb_all": {
+    "censor_rate": 0.06999527856468367,
+    "docs": 464,
+    "molecules": 10229,
+    "name": "BindingDB-All",
+    "path": "data/processed/bindingdb_articles_202608_canal20.parquet",
+    "relation_counts": {
+      "<": 53,
+      "=": 15758,
+      ">": 1133
+    },
+    "rows": 16944,
+    "scaffolds": 4375,
+    "target_endpoints": 20,
+    "targets": 20,
+    "years": [
+      2000,
+      2023
+    ]
+  },
+  "bindingdb_article_independent": {
+    "censor_rate": 0.0703176604815949,
+    "docs": 460,
+    "molecules": 10065,
+    "name": "BindingDB-ArticleIndependent",
+    "path": "data/processed/bindingdb_articles_202608_article_independent.parquet",
+    "relation_counts": {
+      "<": 53,
+      "=": 15482,
+      ">": 1118
+    },
+    "rows": 16653,
+    "scaffolds": 4311,
+    "target_endpoints": 20,
+    "targets": 20,
+    "years": [
+      2000,
+      2023
+    ]
+  },
+  "bindingdb_independent_strict": {
+    "censor_rate": 0.07019652623354769,
+    "docs": 460,
+    "molecules": 10063,
+    "name": "BindingDB-IndependentStrict",
+    "path": "data/processed/bindingdb_articles_202608_independent_strict.parquet",
+    "relation_counts": {
+      "<": 53,
+      "=": 15471,
+      ">": 1115
+    },
+    "rows": 16639,
+    "scaffolds": 4311,
+    "target_endpoints": 20,
+    "targets": 20,
+    "years": [
+      2000,
+      2023
+    ]
+  },
+  "chembl_rows": 168008,
+  "overlap_flags": [
+    {
+      "flag": "overlap_exact_molecule_target_endpoint",
+      "rate": 0.0,
+      "rows": 0,
+      "unique_target_endpoints": 0
+    },
+    {
+      "flag": "overlap_canonical_molecule_target",
+      "rate": 0.0008262511803588291,
+      "rows": 14,
+      "unique_target_endpoints": 2
+    },
+    {
+      "flag": "overlap_molecule_target_no_endpoint",
+      "rate": 0.0,
+      "rows": 0,
+      "unique_target_endpoints": 0
+    },
+    {
+      "flag": "overlap_molecule_only",
+      "rate": 0.015344664778092541,
+      "rows": 260,
+      "unique_target_endpoints": 15
+    },
+    {
+      "flag": "overlap_target_only",
+      "rate": 0.08964825306893295,
+      "rows": 1519,
+      "unique_target_endpoints": 2
+    },
+    {
+      "flag": "overlap_doi",
+      "rate": 0.017174220963172806,
+      "rows": 291,
+      "unique_target_endpoints": 3
+    },
+    {
+      "flag": "overlap_pmid",
+      "rate": 0.01593484419263456,
+      "rows": 270,
+      "unique_target_endpoints": 3
+    },
+    {
+      "flag": "overlap_article",
+      "rate": 0.017174220963172806,
+      "rows": 291,
+      "unique_target_endpoints": 3
+    },
+    {
+      "flag": "overlap_measurement_pactivity_le_0p01",
+      "rate": 0.0,
+      "rows": 0,
+      "unique_target_endpoints": 0
+    },
+    {
+      "flag": "overlap_measurement_pactivity_le_0p05",
+      "rate": 0.0,
+      "rows": 0,
+      "unique_target_endpoints": 0
+    }
+  ]
+}

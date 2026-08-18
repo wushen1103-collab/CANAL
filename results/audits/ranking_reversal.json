@@ -1,0 +1,8 @@
+{
+  "mae_vs_nll_cases": 25,
+  "mae_vs_nll_tau_mean": 0.5131428571428572,
+  "mae_vs_nll_top1_switch_rate": 0.8,
+  "split_pair_cases": 30,
+  "split_pair_tau_mean": 0.5458036677454153,
+  "split_pair_top1_switch_rate": 0.43333333333333335
+}
