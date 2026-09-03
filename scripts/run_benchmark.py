@@ -925,7 +925,11 @@ def run_one_case(
     out = pd.DataFrame(case_rows)
     ensure_dir(out_dir)
     out.to_csv(out_dir / f"metrics_{'semi' if semisynthetic else 'real'}_{split}_seed{seed}.csv", index=False)
-    roles.to_frame("role").to_csv(out_dir / f"split_roles_{split}_seed{seed}.csv", index_label="row_index")
+    # Keep the frozen real-data roles and the semi-synthetic control roles as
+    # distinct release objects.  Using the same filename here would cause a
+    # later semi-synthetic run to overwrite the real 168,008-row assignment.
+    role_kind = "semi_" if semisynthetic else ""
+    roles.to_frame("role").to_csv(out_dir / f"split_roles_{role_kind}{split}_seed{seed}.csv", index_label="row_index")
     return out
 
 

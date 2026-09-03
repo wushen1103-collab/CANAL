@@ -40,7 +40,7 @@ The selected task tables are frozen in `manifests/chembl37_selected_tasks.csv` a
 
 ## 3. Split protocol
 
-The five seeds are 13, 29, 47, 61, and 83. Each method receives identical row roles for the random, scaffold, source, temporal, and joint protocols. Every benchmark run writes `split_roles_<protocol>_seed<seed>.csv`. SHA-256 hashes of the 25 ChEMBL role files from the reported run are frozen in `manifests/split_role_checksums.csv`.
+The five seeds are 13, 29, 47, 61, and 83. Each method receives identical row roles for the random, scaffold, source, temporal, and joint protocols. Real-data runs write `split_roles_<protocol>_seed<seed>.csv`; semi-synthetic controls write `split_roles_semi_<protocol>_seed<seed>.csv`, preventing the control assignments from overwriting the 168,008-row real-data roles. SHA-256 hashes of the 25 deposited ChEMBL real-data assignments are frozen in the release manifest.
 
 Temporal and joint roles are deterministic once the cohort is fixed, so their role hashes are identical across seeds. Seed variation remains active for estimator initialization and, where applicable, random role allocation.
 
