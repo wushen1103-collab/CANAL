@@ -1,0 +1,18 @@
+CANAL reference software environment
+====================================
+
+Reference interpreter used for the reported benchmark runs:
+Python 3.10.12
+
+Pinned Python packages are listed in ../requirements.txt:
+joblib==1.5.3
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==25.0.0
+rdkit==2026.3.5
+scikit-learn==1.7.2
+scipy==1.15.3
+torch==2.13.0
+tqdm==4.70.0
+
+GPU acceleration is optional and is used only by the censored multilayer-perceptron and SMILES-CNN routes. Tree and linear routes run on CPU. The platform-specific PyTorch wheel may be selected for the available CUDA runtime while retaining the recorded PyTorch version.

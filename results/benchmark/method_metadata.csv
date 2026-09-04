@@ -1,0 +1,16 @@
+method,model_family,feature_set,censor_treatment
+canal_extratrees_molecule_calibrated,ExtraTrees,molecule only,naive labels plus validation-only censored affine calibration
+canal_hgb_source_calibrated,histogram gradient boosting,molecule and source-light metadata,naive labels plus validation-only censored affine calibration
+canal_prospective_mlp,multilayer perceptron,prospective features,censored likelihood
+canal_source_mlp,multilayer perceptron,molecule and source-light metadata,censored likelihood
+extratrees_molecule_only_naive,ExtraTrees,molecule only,inequality thresholds treated as exact labels
+hgb_all_source_light_naive,histogram gradient boosting,molecule and source-light metadata,inequality thresholds treated as exact labels
+hgb_metadata_only_naive,histogram gradient boosting,metadata only,inequality thresholds treated as exact labels
+hgb_molecule_only_exact,histogram gradient boosting,molecule only,exact observations only
+hgb_molecule_only_naive,histogram gradient boosting,molecule only,inequality thresholds treated as exact labels
+hgb_prospective_naive,histogram gradient boosting,prospective features,inequality thresholds treated as exact labels
+rf_molecule_only_naive,random forest,molecule only,inequality thresholds treated as exact labels
+ridge_molecule_only_exact,ridge regression,molecule only,exact observations only
+ridge_molecule_only_naive,ridge regression,molecule only,inequality thresholds treated as exact labels
+smiles_cnn_tobit_molecule,SMILES convolutional neural network,SMILES and target identity,censored likelihood
+tobit_mlp_molecule,multilayer perceptron,molecule only,censored likelihood
