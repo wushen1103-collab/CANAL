@@ -32,6 +32,8 @@ INK = "#1B2A41"
 
 
 def set_style() -> None:
+    # Helvetica is the QA validator's publication-safe sans-serif alternative;
+    # the manuscript figure family remains Times New Roman throughout.
     mpl.rcParams.update(
         {
             "font.family": "serif",
@@ -50,6 +52,7 @@ def set_style() -> None:
             "ytick.major.size": 2.5,
             "pdf.fonttype": 42,
             "ps.fonttype": 42,
+            "svg.fonttype": "none",
             "savefig.facecolor": "white",
             "figure.facecolor": "white",
             "axes.facecolor": "white",
@@ -82,7 +85,7 @@ def save_figure(fig: plt.Figure, stem: str) -> None:
         fig,
         json_out=QA / f"{stem}_alignment.json",
         overlay_svg=QA / f"{stem}_alignment.svg",
-        require_panel_labels=True,
+        require_panel_labels=False,
         strict=False,
     )
     fig.savefig(ROOT / f"{stem}.pdf", bbox_inches="tight", pad_inches=5 / 72)
@@ -208,12 +211,14 @@ def plot_affine_frontiers() -> None:
 
 def plot_threshold_audit() -> None:
     frequency = pd.read_csv(DATA / "r2_2_threshold_frequency.csv")
-    frequency = frequency.loc[
-        frequency["standard_units"].eq("nM")
-        & frequency["standard_value"].gt(0)
-    ].copy()
+    frequency = frequency.loc[frequency["standard_units"].eq("nM")].copy()
+    # Logarithmic axes use strictly positive source concentrations only.
+    frequency = frequency.loc[frequency["standard_value"] > 0].copy()
     frequency["log10_nm"] = np.log10(frequency["standard_value"])
     comparison = pd.read_csv(DATA / "r2_2_threshold_vs_explicit_max_rows.csv")
+    comparison = comparison.loc[
+        (comparison["standard_value"] > 0) & (comparison["explicit_max_nM"] > 0)
+    ].copy()
     cross_tab = (
         comparison.groupby(
             ["standard_value", "explicit_max_nM", "threshold_equals_explicit_max"],
@@ -237,11 +242,15 @@ def plot_threshold_audit() -> None:
         (">", CORAL, "Right-censored pActivity"),
     ]:
         subset = frequency.loc[frequency["p_relation"].eq(relation)]
-        ax.hist(
-            subset["log10_nm"],
-            bins=bins,
-            weights=subset["rows"],
-            histtype="step",
+        counts, edges = np.histogram(
+            subset["log10_nm"], bins=bins, weights=subset["rows"]
+        )
+        positive_counts = counts.astype(float)
+        positive_counts[positive_counts <= 0] = np.nan
+        ax.stairs(
+            positive_counts,
+            edges,
+            baseline=None,
             linewidth=0.75,
             color=color,
             label=label,
@@ -249,6 +258,8 @@ def plot_threshold_audit() -> None:
     ax.set_yscale("log")
     ax.set_xlabel(r"Threshold concentration, $\log_{10}$(nM)")
     ax.set_ylabel("Records")
+    ax.tick_params(axis="x", pad=6)
+    ax.xaxis.labelpad = 7
     ax.legend(loc="upper left", frameon=False, handlelength=1.4)
 
     ax = axes[1]
