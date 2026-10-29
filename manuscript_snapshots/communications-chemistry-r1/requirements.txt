@@ -1,0 +1,14 @@
+numpy
+pandas
+scipy
+scikit-learn
+xgboost
+lightgbm
+catboost
+rdkit
+tqdm
+pyyaml
+requests
+joblib
+pyarrow
+chembl-downloader

@@ -19,6 +19,13 @@ The complete, frozen version 1.0.0 dataset is permanently deposited in Zenodo at
 - Four-layer ChEMBL-BindingDB overlap audit and strict external-cohort construction.
 - Compact tables for all 1,350 aggregate benchmark records and the 175-record strict external grid.
 
+## Manuscript snapshots
+
+The source used for the revised Communications Chemistry submission is fixed under
+[`manuscript_snapshots/communications-chemistry-r1/`](manuscript_snapshots/communications-chemistry-r1/)
+and identified by the Git tag `communications-chemistry-r1`. This snapshot is separate
+from the ChEMBL 37 and BindingDB dataset release described below.
+
 ## Quick verification
 
 Create an environment and verify the distributed result snapshot:
